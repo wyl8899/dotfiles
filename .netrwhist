@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/wyl8899/projects/TUNet-desktop/res/qml/dummydata/context'
+let g:netrw_dirhist_2='/home/wyl8899/workspaces/django/foodle/mockwiki'
+let g:netrw_dirhist_3='/home/wyl8899/projects/anervouswebsite/nervous/database'
+let g:netrw_dirhist_4='/home/wyl8899/projects/caffe_router/.git'
+let g:netrw_dirhist_5='/home/wyl8899/projects/anervouswebsite/nervous/database'
