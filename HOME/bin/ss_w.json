@@ -1,0 +1,10 @@
+{
+    "server":"160.16.77.126",
+    "server_port":898,
+    "local_address":"127.0.0.1",
+    "local_port":1080,
+    "password":"bluewins",
+    "timeout":600,
+    "method":"aes-256-cfb"
+}
+
