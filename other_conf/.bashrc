@@ -122,5 +122,8 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/wyl8899/projects/TUNet-desktop/QtH
 # alias for tmux
 alias tmux='tmux -2'
 
-# eda
+# ssh
 alias ssheda='ssh -Y weiyl@192.168.0.86'
+alias sshnervous='ssh nervous@166.111.206.69'
+alias sshwylfedora='ssh wyl8899@wyl8899.imwork.net -p 25322'
+alias sshwylubuntu='ssh wyl8899@wyl8899.imwork.net -p 25222'
