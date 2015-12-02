@@ -113,18 +113,18 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Don't let `cd` slow you down - check 'http://shyiko.com/2014/10/10/commacd/'
 export COMMACD_SEQSTART=1
 source ~/.commacd.bash
 
 # QtHpple for TUNet-Desktop
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/wyl8899/projects/TUNet-desktop/QtHpple
 
-# alias for tmux
+# Tmux 256 colors support
 alias tmux='tmux -2'
 
-# ssh
+# ssh hosts
 alias ssheda='ssh -Y weiyl@192.168.0.86'
-alias sshnervous='ssh nervous@166.111.206.69'
 alias sshwylfedora='ssh wyl8899@wyl8899.imwork.net -p 25322'
 alias sshwylubuntu='ssh wyl8899@wyl8899.imwork.net -p 25222'
 
@@ -132,5 +132,3 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export EDITOR=vim
 
 set -o vi
-
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
