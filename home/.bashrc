@@ -125,8 +125,9 @@ alias tmux='tmux -2'
 
 # ssh hosts
 alias ssheda='ssh -Y weiyl@192.168.0.86'
-alias sshwylfedora='ssh wyl8899@wyl8899.imwork.net -p 25322'
 alias sshwylubuntu='ssh wyl8899@wyl8899.imwork.net -p 25222'
+alias sshwylfedora='ssh wyl8899@wyl8899.imwork.net -p 25322'
+alias sshwylrasp='ssh pi@wyl8899.imwork.net -p 25422'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export EDITOR=vim
