@@ -28,9 +28,10 @@ Plugin 'VundleVim/Vundle.vim'
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'bling/vim-airline'
+Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
-Plugin 'bling/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -56,17 +57,17 @@ let g:ycm_confirm_extra_conf = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-" --- statusline start --- 
+" --- statusline start ---
 
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 
 " Always show statusline
 set laststatus=2
 
+" --- statuline end ---
+
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
-
-" --- statuline end ---
 
 " miscellaneous
 set autoindent
