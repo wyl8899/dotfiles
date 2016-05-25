@@ -31,6 +31,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'bling/vim-airline'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/ListToggle'
 Plugin 'rdnetto/YCM-Generator'
 
 " All of your Plugins must be added before the following line
@@ -52,6 +53,15 @@ filetype plugin indent on    " required
 
 " YCM
 let g:ycm_confirm_extra_conf = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_always_populate_location_list = 1
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+nnoremap <leader>g :YcmCompleter GoTo<CR>
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>i :YcmCompleter GoToInclude<CR>
+nnoremap <leader>t :YcmCompleter GetType<CR>
+nnoremap <leader>d :YcmDiags<CR>
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
@@ -71,6 +81,7 @@ set t_Co=256
 
 " miscellaneous
 set autoindent
-color transparent
+color github
 hi Pmenu ctermfg=7 ctermbg=4
 set relativenumber
+set showcmd
