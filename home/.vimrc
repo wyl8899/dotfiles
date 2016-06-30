@@ -31,8 +31,8 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'bling/vim-airline'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'Valloric/ListToggle'
 Plugin 'rdnetto/YCM-Generator'
+Plugin 'lervag/vimtex'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -56,12 +56,11 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_always_populate_location_list = 1
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
-nnoremap <leader>g :YcmCompleter GoTo<CR>
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <leader>i :YcmCompleter GoToInclude<CR>
-nnoremap <leader>t :YcmCompleter GetType<CR>
-nnoremap <leader>d :YcmDiags<CR>
+nnoremap <leader>yr :YcmForceCompileAndDiagnostics<CR>
+nnoremap <leader>yg :YcmCompleter GoTo<CR>
+nnoremap <leader>yi :YcmCompleter GoToInclude<CR>
+nnoremap <leader>yt :YcmCompleter GetType<CR>
+nnoremap <leader>yd :YcmDiags<CR>
 
 " airline
 let g:airline#extensions#tabline#enabled = 1

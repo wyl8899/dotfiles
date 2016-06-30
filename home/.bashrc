@@ -118,7 +118,7 @@ export COMMACD_SEQSTART=1
 source ~/.commacd.bash
 
 # QtHpple for TUNet-Desktop
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/wyl8899/projects/TUNet-desktop/QtHpple
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/wyl8899/projects/TUNet-desktop/QtHpple
 
 # Tmux 256 colors support
 alias tmux='tmux -2'
@@ -129,7 +129,10 @@ alias sshwylubuntu='ssh wyl8899@wyl8899.imwork.net -p 25222'
 alias sshwylfedora='ssh wyl8899@wyl8899.imwork.net -p 25322'
 alias sshwylrasp='ssh pi@wyl8899.imwork.net -p 25422'
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
 export EDITOR=vim
 
 set -o vi
+
+export PATH="$PATH:/home/wyl8899/Windows/bin"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/wyl8899/projects/caffe/build/lib"
