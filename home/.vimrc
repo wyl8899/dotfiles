@@ -33,6 +33,13 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'lervag/vimtex'
+Plugin 'hsanson/vim-im'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'tpope/vim-surround'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -66,21 +73,46 @@ nnoremap <leader>yd :YcmDiags<CR>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-" --- statusline start ---
-
+" statusline
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+set laststatus=2 " Always show statusline
 
-" Always show statusline
-set laststatus=2
+" folding
+set foldmethod=syntax
+set nofoldenable
 
-" --- statuline end ---
+" NERD Commenter
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
 
-" Use 256 colours (Use this setting only if your terminal supports 256 colours)
-set t_Co=256
+" NERDTree
+let NERDTreeWinSize=32
+let NERDTreeWinPos="right"
+let NERDTreeShowHidden=1
+let NERDTreeMinimalUI=1
+let NERDTreeAutoDeleteBuffer=1
+nnoremap <Leader>fl :NERDTreeToggle<CR>
+
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<leader><tab>"
+let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
+let g:UltiSnipsJumpBackwardTrigger="<leader><s-tab>"
+
+" Faster buffer switching
+nnoremap <Leader>ls :buffers<CR>:buffer<Space>
 
 " miscellaneous
+
 set autoindent
 color github
 hi Pmenu ctermfg=7 ctermbg=4
 set relativenumber
 set showcmd
+set hlsearch
+set t_Co=256 " Use 256 colours
