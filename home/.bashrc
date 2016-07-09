@@ -137,3 +137,5 @@ set -o vi
 
 export PATH="$PATH:/home/wyl8899/Windows/bin"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/wyl8899/projects/caffe/build/lib"
+
+PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
