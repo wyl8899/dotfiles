@@ -29,7 +29,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'user/L9', {'name': 'newL9'}
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'bling/vim-airline'
-Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'lervag/vimtex'
@@ -40,6 +40,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'junegunn/vim-easy-align'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -77,6 +78,10 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 set laststatus=2 " Always show statusline
 
+" better-whitespace
+nnoremap <leader>wt :ToggleWhitespace<CR>
+nnoremap <leader>wf :StripWhitespace<CR>
+
 " folding
 set foldmethod=syntax
 set nofoldenable
@@ -107,6 +112,10 @@ let g:UltiSnipsJumpBackwardTrigger="<leader><s-tab>"
 " Faster buffer switching
 nnoremap <Leader>ls :buffers<CR>:buffer<Space>
 
+" Easy-align
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
+
 " miscellaneous
 
 set autoindent
@@ -116,3 +125,13 @@ set relativenumber
 set showcmd
 set hlsearch
 set t_Co=256 " Use 256 colours
+
+" leave insert mode quickly
+if ! has('gui_running')
+  set ttimeoutlen=10
+  augroup FastEscape
+    autocmd!
+    au InsertEnter * set timeoutlen=0
+    au InsertLeave * set timeoutlen=1000
+  augroup END
+endif
