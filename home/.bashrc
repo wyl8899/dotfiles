@@ -135,9 +135,11 @@ export EDITOR=vim
 
 set -o vi
 
-export PATH="$PATH:/home/wyl8899/Windows/bin"
+export PATH="$PATH:/home/wyl8899/bin:/home/wyl8899/Android/Sdk/platform-tools"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/wyl8899/projects/caffe/build/lib"
 
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/gurobi652/linux64/lib"
+
+export JAVA_HOME="/usr/local/android-studio/jre"
 
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'

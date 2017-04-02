@@ -162,3 +162,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# a solid color "wallpaper"
+exec --no-startup-id xsetroot -solid "#002244"
