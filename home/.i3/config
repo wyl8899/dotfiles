@@ -89,12 +89,12 @@ bindsym $mod+a focus parent
 
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && refresh_i3status.sh
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5% && refresh_i3status.sh
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +2% && refresh_i3status.sh
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 1 -2% && refresh_i3status.sh
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && refresh_i3status.sh
 
-bindsym $mod+minus exec --no-startup-id pactl -- set-sink-volume 0 -5% && refresh_i3status.sh
-bindsym $mod+plus exec --no-startup-id pactl set-sink-volume 0 +5% && refresh_i3status.sh
+bindsym $mod+minus exec --no-startup-id pactl -- set-sink-volume 1 -2% && refresh_i3status.sh
+bindsym $mod+plus exec --no-startup-id pactl set-sink-volume 1 +2% && refresh_i3status.sh
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -110,6 +110,7 @@ bindsym $mod+0 workspace 10
 
 bindsym Mod1+Tab workspace back_and_forth
 bindsym Mod4+Tab workspace next
+bindsym Mod4+Shift+Tab workspace previous
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1

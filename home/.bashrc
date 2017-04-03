@@ -138,7 +138,7 @@ set -o vi
 export PATH="$PATH:/home/wyl8899/bin:/home/wyl8899/Android/Sdk/platform-tools"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/wyl8899/projects/caffe/build/lib"
 
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/gurobi652/linux64/lib"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/gurobi652/linux64/lib:/home/wyl8899/Qt5.8.0/5.8/gcc_64/lib"
 
 export JAVA_HOME="/usr/local/android-studio/jre"
 
