@@ -68,6 +68,7 @@ nnoremap <leader>yr :YcmForceCompileAndDiagnostics<CR>
 nnoremap <leader>yg :YcmCompleter GoTo<CR>
 nnoremap <leader>yi :YcmCompleter GoToInclude<CR>
 nnoremap <leader>yt :YcmCompleter GetType<CR>
+nnoremap <leader>yf :YcmCompleter FixIt<CR>
 nnoremap <leader>yd :YcmDiags<CR>
 
 " airline
