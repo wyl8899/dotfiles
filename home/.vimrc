@@ -41,6 +41,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'drmingdrmer/vim-syntax-markdown'
+Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'thinca/vim-localrc'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -96,6 +99,8 @@ let g:NERDCompactSexyComs = 1
 let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
+" Use // for C
+let g:NERDAltDelims_c = 1
 
 " NERDTree
 let NERDTreeWinSize=32
