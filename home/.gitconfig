@@ -18,3 +18,7 @@
 
 	l = !"git lg1"
 	lg = !"git lgg"
+[credential]
+	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+[gpg]
+	program = gpg2
