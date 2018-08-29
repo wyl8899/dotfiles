@@ -124,22 +124,36 @@ source ~/.commacd.bash
 alias tmux='tmux -2'
 
 # ssh hosts
-alias ssheda='ssh -Y weiyl@192.168.0.138'
+alias ssheda='ssh -Y weiyl@192.168.0.92'
 alias sshwylubuntu='ssh wyl8899@wyl8899.imwork.net -p 25222'
 alias sshwylfedora='ssh wyl8899@wyl8899.imwork.net -p 25322'
 alias sshwylrasp='ssh pi@wyl8899.imwork.net -p 25422'
 export ROBOT='Robot@192.168.56.1'
 
-export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
 export EDITOR=vim
 
 set -o vi
 
-export PATH="$PATH:/home/wyl8899/bin:/home/wyl8899/Android/Sdk/platform-tools"
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/wyl8899/projects/caffe/build/lib"
+export PATH="$PATH:/home/wyl8899/bin:$HOME/projects/depot_tools:$HOME/Downloads/Mips_toolchain-4.4.6-bin/bin"
 
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/gurobi652/linux64/lib:/home/wyl8899/Qt5.8.0/5.8/gcc_64/lib"
-
-export JAVA_HOME="/usr/local/android-studio/jre"
+export JAVA_HOME="/usr/local/jdk1.8.0_121"
 
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
+alias hexdumpsim="hexdump -v -e '/1 \"%02x\n\"'"
+
+export CLFS=/mnt/clfs
+
+ssh-add $HOME/.ssh/id_rsa &> /dev/null
+ssh-add $HOME/.ssh/id_rsa_momenta &> /dev/null
+
+export PYTHONDONTWRITEBYTECODE=1
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv &> /dev/null; then
+  eval "$(pyenv init -)"
+fi
+eval "$(pyenv virtualenv-init -)"
+
+export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting

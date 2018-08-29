@@ -2,5 +2,5 @@
 # meant to be invoked by ~/.profile
 BIN=$HOME/bin
 $BIN/wylcaps.sh
-$BIN/wylt450.sh
+# $BIN/wylt450.sh
 export XDG_CURRENT_DESKTOP="Unity"
