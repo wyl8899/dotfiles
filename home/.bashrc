@@ -134,7 +134,7 @@ export EDITOR=vim
 
 set -o vi
 
-export PATH="$PATH:/home/wyl8899/bin:$HOME/projects/depot_tools:$HOME/Downloads/Mips_toolchain-4.4.6-bin/bin"
+export PATH="$HOME/bin:$HOME/projects/depot_tools:$HOME/Downloads/Mips_toolchain-4.4.6-bin/bin:$PATH"
 
 export JAVA_HOME="/usr/local/jdk1.8.0_121"
 
@@ -157,3 +157,16 @@ fi
 eval "$(pyenv virtualenv-init -)"
 
 export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
+
+export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
+
+# ROS
+# source /opt/ros/melodic/setup.bash
+
+alias i3lock='i3lock -i $HOME/Pictures/default_i3lock_bg.png'
+
+export PATH="$PATH:/usr/local/cuda-8.0/bin"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+. <(kubectl completion bash)
