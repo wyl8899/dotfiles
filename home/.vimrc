@@ -33,7 +33,8 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'lervag/vimtex'
-Plugin 'hsanson/vim-im'
+" Plugin 'hsanson/vim-im'
+Plugin 'h-youhei/vim-ibus'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -141,3 +142,7 @@ if ! has('gui_running')
     au InsertLeave * set timeoutlen=1000
   augroup END
 endif
+
+" Configure vim-ibus
+let g:ibus#layout = 'xkb:us::eng'
+let g:ibus#engine = 'rime'
